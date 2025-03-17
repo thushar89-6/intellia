@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-size-h1: 2rem;
+  --line-height-h1: 1.2;
+  --font-weight-h1: 600;
+  --font-size-h2: 1.875rem;
+  --line-height-h2: 1.2;
+  --font-weight-h2: 500;
+  --font-size-h3: 1.5rem;
+  --line-height-h3: 1.2;
+  --font-weight-h3: 500;
+  --font-size-h4: 1.25rem;
+  --line-height-h4: 1.2;
+  --font-weight-h4: 500;
+  --font-size-h5: 1.125rem;
+  --line-height-h5: 1.2;
+  --font-weight-h5: 500;
+  --font-size-h6: 1rem;
+  --line-height-h6: 1.2;
+  --font-weight-h6: 500;
+  --font-size-body-large: 1.125rem;
+  --line-height-body-large: 1.75;
+  --font-size-body: 1rem;
+  --line-height-body: 1.75;
+  --font-size-small: 0.875rem;
+  --line-height-small: 1.75;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --gradient-primary: linear-gradient(135deg, #121824 0%, #1A2234 100%);
+  --gradient-accent: linear-gradient(135deg, #D85A78 0%, #EE6E73 100%);
+  --gradient-ethereal: linear-gradient(135deg, #5D9CFF 0%, rgba(93, 156, 255, 0.7) 100%);
+  --glow-radial: radial-gradient(circle, rgba(216, 90, 120, 0.08) 0%, rgba(10, 13, 20, 0) 80%);
+  --glow-ethereal: radial-gradient(circle, rgba(93, 156, 255, 0.08) 0%, rgba(10, 13, 20, 0) 80%);
+  --color-primary-cosmic-depth: #0A0D14;
+  --color-primary-deep-space: #121824;
+  --color-primary-event-horizon: #1A2234;
+  --color-primary-nebula-red: #D85A78;
+  --color-primary-ethereal-blue: #5D9CFF;
+  --color-primary-cosmic-pink: #EE6E73;
+  --color-primary-cloud-gray: #8090A6;
+  --color-text-primary: #F8F9FC;
+  --color-text-secondary: #A1B1C7;
+}
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
